@@ -15,10 +15,21 @@
 (setq mac-command-modifier 'meta)
 (setq mac-option-modifier nil)
 
+;; Backup file stuff:
+(setq backup-directory-alist `(("." . "~/.emacs_bcks")))
+(setq backup-by-copying t)
+(setq delete-old-versions t
+  kept-new-versions 2
+  kept-old-versions 2
+  version-control t)
+
 ;; Enable ido everywhere:
 (setq ido-enable-flex-matching t)
 (setq ido-everywhere t)
 (ido-mode 1)
+
+;; Two spaces indent is enough:
+(setq js-indent-level 2)
 
 ;; newline-and-indent when RET for most modes:
 (global-set-key (kbd "RET") 'newline-and-indent)
