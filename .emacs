@@ -61,6 +61,10 @@
 
 (el-get 'sync)
 
+;; Load rhtml-mode for .rhtml and .erb files
+(setq auto-mode-alist  (cons '("\\.rhtml$" . rhtml-mode) auto-mode-alist))
+(setq auto-mode-alist  (cons '("\\.erb$" . rhtml-mode) auto-mode-alist))
+
 ;; Enabling color theme if window system
 (if window-system
     (color-theme-railscasts))
