@@ -19,9 +19,9 @@
 (setq backup-directory-alist `(("." . "~/.emacs_bcks")))
 (setq backup-by-copying t)
 (setq delete-old-versions t
-  kept-new-versions 2
-  kept-old-versions 2
-  version-control t)
+      kept-new-versions 2
+      kept-old-versions 2
+      version-control t)
 
 ;; Enable ido everywhere:
 (setq ido-enable-flex-matching t)
@@ -35,7 +35,7 @@
 (global-set-key (kbd "RET") 'newline-and-indent)
 ;; newline-and-indent when RET for ruby-mode:
 (add-hook 'ruby-mode-hook (lambda ()
-  (local-set-key "\r"'newline-and-indent)))
+                            (local-set-key "\r"'newline-and-indent)))
 
 ;; Indent whole buffe
 (defun indent-whole-buffer ()
@@ -64,6 +64,15 @@
 ;; Load rhtml-mode for .rhtml and .erb files
 (setq auto-mode-alist  (cons '("\\.rhtml$" . rhtml-mode) auto-mode-alist))
 (setq auto-mode-alist  (cons '("\\.erb$" . rhtml-mode) auto-mode-alist))
+
+;; Load ruby-mode for Rakefiles and Gemfiles
+(setq auto-mode-alist  (cons '("Rakefile" . ruby-mode) auto-mode-alist))
+(setq auto-mode-alist  (cons '("Gemfile" . ruby-mode) auto-mode-alist))
+
+;; Load ruby-mode and rinari-minor-mode
+(setq auto-mode-alist  (cons '("\\.rake$" . rinari-minor-mode) auto-mode-alist))
+(setq auto-mode-alist  (cons '("\\.rake$" . ruby-mode) auto-mode-alist))
+
 
 ;; Enabling color theme if window system
 (if window-system
