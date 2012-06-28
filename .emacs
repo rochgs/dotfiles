@@ -77,3 +77,4 @@
 ;; Enabling color theme if window system
 (if window-system
     (color-theme-railscasts))
+(put 'scroll-left 'disabled nil)
