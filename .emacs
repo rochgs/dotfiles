@@ -31,6 +31,9 @@
 ;; Two spaces indent is enough:
 (setq js-indent-level 2)
 
+;; A more conventional indentation of continuation lines in Ruby:
+(setq ruby-deep-indent-paren nil)
+
 ;; newline-and-indent when RET for most modes:
 (global-set-key (kbd "RET") 'newline-and-indent)
 ;; newline-and-indent when RET for ruby-mode:
