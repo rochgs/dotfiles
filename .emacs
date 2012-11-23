@@ -56,11 +56,11 @@
 (add-to-list 'load-path "~/.emacs.d/el-get/el-get")
 
 (unless (require 'el-get nil t)
-  (with-current-buffer
-      (url-retrieve-synchronously
-       "https://raw.github.com/dimitri/el-get/master/el-get-install.el")
-    (end-of-buffer)
-    (eval-print-last-sexp)))
+  (url-retrieve
+   "https://raw.github.com/dimitri/el-get/master/el-get-install.el"
+   (lambda (s)
+     (goto-char (point-max))
+     (eval-print-last-sexp))))
 
 (el-get 'sync)
 
@@ -75,7 +75,6 @@
 ;; Load ruby-mode and rinari-minor-mode
 (setq auto-mode-alist  (cons '("\\.rake$" . rinari-minor-mode) auto-mode-alist))
 (setq auto-mode-alist  (cons '("\\.rake$" . ruby-mode) auto-mode-alist))
-
 
 ;; Enabling color theme if window system
 (if window-system
