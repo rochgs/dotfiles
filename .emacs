@@ -1,5 +1,5 @@
 ;; Globally changes the default font:
-(add-to-list 'default-frame-alist '(font . "DejaVu Sans Mono-16"))
+(add-to-list 'default-frame-alist '(font . "DejaVu Sans Mono-10"))
 
 ;; Disabling the ugly bars:
 (menu-bar-mode -1)
