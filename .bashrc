@@ -78,3 +78,5 @@ fi
 export EDITOR="emacs -nw -q"
 
 fi
+
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
