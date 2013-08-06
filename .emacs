@@ -102,3 +102,6 @@
                (set-buffer-modified-p nil)
                (message "File '%s' successfully renamed to '%s'" name (file-name-nondirectory new-name))))))))
 (global-set-key (kbd "C-c r") 'rename-this-buffer-and-file)
+
+;; Make the shell prompt read-only:
+(setq comint-prompt-read-only t)
