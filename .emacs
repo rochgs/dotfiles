@@ -108,5 +108,5 @@
 ;; Customize shell colors for my color theme:
 (setq ansi-color-names-vector
       ["dim gray" "red3" "green3" "yellow4" "dodger blue" "magenta3" "deep sky blue" "dark gray"])
-(setq ansi-color-map (ansi-color-make-color-map))
+;;(setq ansi-color-map (ansi-color-make-color-map))
 
