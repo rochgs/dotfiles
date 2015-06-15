@@ -52,6 +52,9 @@
 ;; Usar buffer-menu en lugar de buffer-list
 (global-set-key "\C-x\C-b" 'buffer-menu)
 
+;; Desisable annoying alarma bell:
+(setq ring-bell-function 'ignore)
+
 ;; Init el-get or install it if no present
 (add-to-list 'load-path "~/.emacs.d/el-get/el-get")
 
@@ -64,8 +67,7 @@
 
 (el-get 'sync)
 
-(load "~/.emacs.d/web-mode")
-(require 'web-mode)
+;;(require 'web-mode)
 (add-to-list 'auto-mode-alist '("\\.phtml\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.tpl\\.php\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.[agj]sp\\'" . web-mode))
@@ -100,7 +102,8 @@
     (color-theme-railscasts))
 (put 'scroll-left 'disabled nil)
 
-(require 'magit)
+;; (require 'magit)
+;; (setq magit-last-seen-setup-instructions "1.4.0")
 (global-set-key (kbd "C-x C-g") 'magit-status)
 
 ;; Rename file and buffer in Emacs
@@ -127,4 +130,4 @@
 ;; Customize shell colors for my color theme:
 (setq ansi-color-names-vector
       ["dim gray" "red3" "green3" "yellow4" "dodger blue" "magenta3" "deep sky blue" "dark gray"])
-(setq ansi-color-map (ansi-color-make-color-map))
+;; (setq ansi-color-map (ansi-color-make-color-map))
