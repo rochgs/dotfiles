@@ -6,6 +6,9 @@
 (tool-bar-mode -1)
 (scroll-bar-mode -1)
 
+;; column-number-mode always on:
+(setq column-number-mode t)
+
 ;; Desactiva el buffer de bienvenida *GNU Emacs*
 (setq inhibit-startup-message t)
 
