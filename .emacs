@@ -1,5 +1,5 @@
 ;; Globally changes the default font:
-(add-to-list 'default-frame-alist '(font . "DejaVu Sans Mono-10"))
+(add-to-list 'default-frame-alist '(font . "DejaVu Sans Mono-14"))
 
 ;; Disabling the ugly bars:
 (menu-bar-mode -1)
@@ -105,8 +105,7 @@
     (color-theme-railscasts))
 (put 'scroll-left 'disabled nil)
 
-;; (require 'magit)
-;; (setq magit-last-seen-setup-instructions "1.4.0")
+(setq magit-last-seen-setup-instructions "1.4.0")
 (global-set-key (kbd "C-x C-g") 'magit-status)
 
 ;; Rename file and buffer in Emacs
