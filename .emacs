@@ -33,6 +33,7 @@
 
 ;; Two spaces indent is enough:
 (setq js-indent-level 2)
+(setq css-indent-offset 2)
 
 ;; A more conventional indentation of continuation lines in Ruby:
 (setq ruby-deep-indent-paren nil)
