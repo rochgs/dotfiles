@@ -134,3 +134,11 @@
 (setq ansi-color-names-vector
       ["dim gray" "red3" "green3" "yellow4" "dodger blue" "magenta3" "deep sky blue" "dark gray"])
 ;; (setq ansi-color-map (ansi-color-make-color-map))
+
+;; jshint-mode (sobre flymaker)
+(require 'flymake-jshint)
+(add-hook 'javascript-mode-hook
+	  (lambda () (flymake-mode t)))
+
+;; Turns on flymake for all files which have a flymake mode
+(add-hook 'find-file-hook 'flymake-find-file-hook)
