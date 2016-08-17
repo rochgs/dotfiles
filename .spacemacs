@@ -44,6 +44,7 @@ values."
      ruby
      php
      ruby-on-rails
+     html
      )
    ;; List of additional packages that will be installed without being
    ;; wrapped in a layer. If you need some configuration for these
@@ -249,8 +250,8 @@ executes.
  This function is mostly useful for variables that need to be set
 before packages are loaded. If you are unsure, you should try in setting them in
 `dotspacemacs/user-config' first."
-  ;; Globally changes the default font:
-  (add-to-list 'default-frame-alist '(font . "DejaVu Sans Mono-14"))
+  ;; Fix a bug in projectile that messes with Tramp when trying to do something as sudo:
+  (set projectile-mode-line " Projectile")
   )
 
 (defun dotspacemacs/user-config ()
@@ -260,6 +261,31 @@ layers configuration.
 This is the place where most of your configurations should be done. Unless it is
 explicitly specified that a variable should be set before a package is loaded,
 you should place your code here."
+  ;; Globally changes the default font:
+  (add-to-list 'default-frame-alist '(font . "DejaVu Sans Mono-14"))
+  ;; Two spaces indent is enough:
+  (setq standard-indent 2)
+  ;; And no tabs, for God's sake:
+  (setq-default indent-tabs-mode nil)
+  ;; Indent-region-of-buffer
+  (defun indent-buffer ()
+    "Indent the currently visited buffer."
+    (interactive)
+    (indent-region (point-min) (point-max)))  
+  (defun indent-region-or-buffer ()
+    "Indent a region if selected, otherwise the whole buffer."
+    (interactive)
+    (save-excursion
+      (if (region-active-p)
+          (progn
+            (indent-region (region-beginning) (region-end))
+            (whitespace-cleanup-region (region-beginning) (region-end))
+            (message "Indented selected region."))
+        (progn
+          (indent-buffer)
+          (whitespace-cleanup)
+          (message "Indented buffer.")))))
+  (global-set-key (kbd "C-c i") 'indent-region-or-buffer)
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
