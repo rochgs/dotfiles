@@ -18,6 +18,7 @@ values."
    ;; of a list then all discovered layers will be installed.
    dotspacemacs-configuration-layers
    '(
+     csv
      ;; ----------------------------------------------------------------
      ;; Example of useful layers you may want to use right away.
      ;; Uncomment some layer names and press <SPC f e R> (Vim style) or
@@ -251,7 +252,8 @@ executes.
 before packages are loaded. If you are unsure, you should try in setting them in
 `dotspacemacs/user-config' first."
   ;; Fix a bug in projectile that messes with Tramp when trying to do something as sudo:
-  (set projectile-mode-line " Projectile")
+  ;;(add-hook 'text-mode-hook 'projectile-mode)
+  ;;(add-hook 'prog-mode-hook 'projectile-mode)
   )
 
 (defun dotspacemacs/user-config ()
@@ -267,11 +269,13 @@ you should place your code here."
   (setq standard-indent 2)
   ;; And no tabs, for God's sake:
   (setq-default indent-tabs-mode nil)
+  ;; A more conventional indentation of continuation lines in Ruby:
+  (setq ruby-deep-indent-paren nil)
   ;; Indent-region-of-buffer
   (defun indent-buffer ()
     "Indent the currently visited buffer."
     (interactive)
-    (indent-region (point-min) (point-max)))  
+    (indent-region (point-min) (point-max)))
   (defun indent-region-or-buffer ()
     "Indent a region if selected, otherwise the whole buffer."
     (interactive)
