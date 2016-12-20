@@ -106,13 +106,7 @@ values."
    ;; List of themes, the first of the list is loaded when spacemacs starts.
    ;; Press <SPC> T n to cycle to the next theme in the list (works great
    ;; with 2 themes variants, one dark and one light)
-   dotspacemacs-themes '(spacemacs-dark
-                         spacemacs-light
-                         solarized-light
-                         solarized-dark
-                         leuven
-                         monokai
-                         zenburn)
+   dotspacemacs-themes '(spacemacs-dark)
    ;; If non nil the cursor color matches the state color in GUI Emacs.
    dotspacemacs-colorize-cursor-according-to-state t
    ;; Default font. `powerline-scale' allows to quickly tweak the mode-line
@@ -264,7 +258,7 @@ This is the place where most of your configurations should be done. Unless it is
 explicitly specified that a variable should be set before a package is loaded,
 you should place your code here."
   ;; Globally changes the default font:
-  (add-to-list 'default-frame-alist '(font . "DejaVu Sans Mono-14"))
+  (add-to-list 'default-frame-alist '(font . "DejaVu Sans Mono-14.5"))
   ;; Two spaces indent is enough:
   (setq standard-indent 2)
   ;; And no tabs, for God's sake:
