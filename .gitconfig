@@ -24,7 +24,7 @@
 
 [user]
   name = Rodrigo García Suárez
-  email = rodrigo@simplelogica.net
+	email = rodrigo.garcia@the-cocktail.com
 
 [branch "master"]
   mergeoptions = --no-ff
