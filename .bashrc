@@ -7,7 +7,6 @@ if [ "$PS1" ] ; then
 
     # Color para grep y para el prompt:
     export TERM=xterm-color
-    export GREP_OPTIONS='--color=auto' GREP_COLOR='1;32'
 
     # Muestra la rama de git en el prompt:
     function parse_git_dirty {
@@ -78,3 +77,7 @@ if [ "$PS1" ] ; then
 
     PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 fi
+
+# Añadidos automáticamente por asdf:
+. $HOME/.asdf/asdf.sh
+. $HOME/.asdf/completions/asdf.bash
