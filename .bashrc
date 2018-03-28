@@ -64,13 +64,10 @@ if [ "$PS1" ] ; then
         . /etc/bash_completion
     fi
 
-    # Añade rake auto-completado:
+    # Anade rake auto-completado:
     if [ -f ~/.scripts/rake_cap_bash_autocomplete.sh ]; then
         . ~/.scripts/rake_cap_bash_autocomplete.sh
     fi
-
-    # Load RVM into a shell session *as a function*
-    [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
     # Se establece GNU/Emacs como editor por defecto:
     export EDITOR="emacs -nw -q"
@@ -78,6 +75,15 @@ if [ "$PS1" ] ; then
     PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 fi
 
-# Añadidos automáticamente por asdf:
+# Anadidos automaticamente por asdf:
 . $HOME/.asdf/asdf.sh
 . $HOME/.asdf/completions/asdf.bash
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/opt/google/google-cloud-sdk/path.bash.inc' ]; then source '/opt/google/google-cloud-sdk/path.bash.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/opt/google/google-cloud-sdk/completion.bash.inc' ]; then source '/opt/google/google-cloud-sdk/completion.bash.inc'; fi
+
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"
