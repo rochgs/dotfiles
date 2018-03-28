@@ -80,10 +80,10 @@ fi
 . $HOME/.asdf/completions/asdf.bash
 
 # The next line updates PATH for the Google Cloud SDK.
-if [ -f '/opt/google/google-cloud-sdk/path.bash.inc' ]; then source '/opt/google/google-cloud-sdk/path.bash.inc'; fi
+if [ -f '/home/rochgs/opt/google-cloud-sdk/path.bash.inc' ]; then source '/home/rochgs/opt/google-cloud-sdk/path.bash.inc'; fi
 
 # The next line enables shell command completion for gcloud.
-if [ -f '/opt/google/google-cloud-sdk/completion.bash.inc' ]; then source '/opt/google/google-cloud-sdk/completion.bash.inc'; fi
+if [ -f '/home/rochgs/opt/google-cloud-sdk/completion.bash.inc' ]; then source '/home/rochgs/opt/google-cloud-sdk/completion.bash.inc'; fi
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
