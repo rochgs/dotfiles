@@ -71,8 +71,6 @@ if [ "$PS1" ] ; then
 
     # Se establece GNU/Emacs como editor por defecto:
     export EDITOR="emacs -nw -q"
-
-    PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 fi
 
 # Anadidos automaticamente por asdf:
