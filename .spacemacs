@@ -289,6 +289,7 @@ you should place your code here."
           (whitespace-cleanup)
           (message "Indented buffer.")))))
   (global-set-key (kbd "C-c i") 'indent-region-or-buffer)
+  (setq ruby-insert-encoding-magic-comment nil)
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
