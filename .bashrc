@@ -73,10 +73,6 @@ if [ "$PS1" ] ; then
     export EDITOR="emacs -nw -q"
 fi
 
-# Anadidos automaticamente por asdf:
-. $HOME/.asdf/asdf.sh
-. $HOME/.asdf/completions/asdf.bash
-
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
 
