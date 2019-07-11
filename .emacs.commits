@@ -1,3 +1,9 @@
+;; Flyspell doesn't load when the buffer is open in Fundamental Mode
+;; right away and text mode is more appropriate anyway:
+(setq-default major-mode 'text-mode)
+(dolist (hook '(text-mode-hook))
+      (add-hook hook (lambda () (flyspell-mode 1))))
+
 ;; based upon http://snarfed.org/minimal_emacs_for_fast_startup
 ; cutoff for word wrap
 (setq-default fill-column 70)
@@ -7,6 +13,5 @@
 
 ; turn on random customization options
 (custom-set-variables
-  '(line-number-mode t)
   '(column-number-mode t)
   )
