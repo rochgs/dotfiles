@@ -71,13 +71,11 @@ if [ "$PS1" ] ; then
 
     # Se establece GNU/Emacs como editor por defecto:
     export EDITOR="emacs -nw -q"
+
+    # Añade ejecutables de rbenv al path:
+    export PATH="$PATH:/home/rochgs/.rbenv/bin"
+
+    # Añade ejecutable de s3cmd (a la espera de que haya un paquete para Debian
+    # disponible):
+    export PATH="$PATH:/opt/s3cmd-2.0.2/s3cmd"
 fi
-
-# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
-export PATH="$PATH:$HOME/.rvm/bin"
-
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/usr/lib/google-cloud-sdk/path.bash.inc' ]; then source '/usr/lib/google-cloud-sdk/path.bash.inc'; fi
-
-# The next line enables shell command completion for gcloud.
-if [ -f '/usr/lib/google-cloud-sdk/completion.bash.inc' ]; then source '/usr/lib/google-cloud-sdk/completion.bash.inc'; fi
