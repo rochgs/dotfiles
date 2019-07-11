@@ -1,30 +1,9 @@
-[alias]
-  mrg = merge --no-ff
-
-[color]
-  branch = auto
-  diff = auto
-  status = auto
-
-[color "branch"]
-  current = yellow reverse
-  local = yellow
-  remote = green
-
-[color "diff"]
-  meta = yellow bold
-  frag = magenta bold
-  old = red bold
-  new = green bold
-
-[color "status"]
-  added = yellow
-  changed = green
-  untracked = cyan
-
 [user]
-  name = Rodrigo García Suárez
-	email = rodrigo.garcia@the-cocktail.com
+	name = Rodrigo García Suárez
+	email = roch@bebanjo.com
+
+[branch "stable"]
+	mergeoptions = --no-ff
 
 [branch "master"]
-  mergeoptions = --no-ff
+	mergeoptions = --no-ff
