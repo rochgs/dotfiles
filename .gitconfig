@@ -2,6 +2,9 @@
 	name = Rodrigo García Suárez
 	email = roch@bebanjo.com
 
+[core]
+    editor = emacs -nw --no-init-file --no-site-file --load ~/.emacs.commits
+
 [branch "stable"]
 	mergeoptions = --no-ff
 
