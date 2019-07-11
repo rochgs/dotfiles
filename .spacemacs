@@ -263,7 +263,7 @@ you should place your code here."
   (setq standard-indent 2)
   (setq js-indent-level 2)
   (setq nginx-indent-level 2)
-  ;; And no tabs, for God'sx sake:
+  ;; And no tabs, for God's sake:
   (setq-default indent-tabs-mode nil)
   ;; A more conventional indentation of continuation lines in Ruby:
   (setq ruby-deep-indent-paren nil)
