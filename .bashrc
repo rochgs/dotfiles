@@ -78,4 +78,7 @@ if [ "$PS1" ] ; then
     # Añade ejecutable de s3cmd (a la espera de que haya un paquete para Debian
     # disponible):
     export PATH="$PATH:/opt/s3cmd-2.0.2/s3cmd"
+
+    # Alias for GNU Time:
+    alias gnu-time='/usr/bin/time -v'
 fi
