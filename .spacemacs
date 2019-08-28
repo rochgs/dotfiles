@@ -267,6 +267,8 @@ you should place your code here."
   (setq-default indent-tabs-mode nil)
   ;; A more conventional indentation of continuation lines in Ruby:
   (setq ruby-deep-indent-paren nil)
+  (setq ruby-deep-arglist nil)
+  (setq ruby-deep-indent-paren-style nil)
   ;; Indent-region-of-buffer
   (defun indent-buffer ()
     "Indent the currently visited buffer."
