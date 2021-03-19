@@ -1,0 +1,15 @@
+[Desktop Entry]
+Version=1.0
+
+Name=Autocutsel
+GenericName=Clipboard Synchronization
+Comment=Synchronizes all clipboards present in an X Session
+
+TryExec=/home/rochgs/.dotfiles/scripts/autocutsel.sh
+Exec=/home/rochgs/.dotfiles/scripts/autocutsel.sh
+Type=Application
+Terminal=false
+NoDisplay=true
+StartupNotify=false
+
+
