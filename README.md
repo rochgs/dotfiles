@@ -2,6 +2,10 @@
 
 Last test of installation: fresh new Debian 12 system.
 
+### Prerequisites
+
+- ```sudo apt-get install bash-completion```
+
 ### Procedure
 
 1. Clone the repository wherever you want. I have it in `.dotfiles/`.
