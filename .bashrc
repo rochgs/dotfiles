@@ -73,7 +73,7 @@ if [ "$PS1" ] ; then
     export EDITOR="emacs -nw -q"
 
     # Añade ejecutables de rbenv al path:
-    export PATH="$PATH:/home/rochgs/.rbenv/bin"
+    export PATH="$PATH:/home/roch/.rbenv/bin"
 
     # Añade ejecutable de s3cmd (a la espera de que haya un paquete para Debian
     # disponible):
