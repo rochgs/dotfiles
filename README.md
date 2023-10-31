@@ -5,6 +5,7 @@ Last test of installation: fresh new Debian 12 system.
 ### Prerequisites
 
 - ```sudo apt-get install bash-completion```
+- ```sudo apt install autocutsel```
 
 ### Procedure
 
