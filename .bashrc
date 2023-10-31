@@ -72,13 +72,6 @@ if [ "$PS1" ] ; then
     # Se establece GNU/Emacs como editor por defecto:
     export EDITOR="emacs -nw -q"
 
-    # Añade ejecutables de rbenv al path:
-    export PATH="$PATH:/home/roch/.rbenv/bin"
-
-    # Añade ejecutable de s3cmd (a la espera de que haya un paquete para Debian
-    # disponible):
-    export PATH="$PATH:/opt/s3cmd-2.0.2/s3cmd"
-
     # Alias for GNU Time:
     alias gnu-time='/usr/bin/time -v'
 fi
