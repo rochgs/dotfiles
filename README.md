@@ -6,6 +6,8 @@ Last test of installation: fresh new Debian 12 system.
 
 - ```sudo apt-get install bash-completion```
 - ```sudo apt install autocutsel```
+- ```git clone https://github.com/rbenv/rbenv.git ~/.rbenv```
+- ```git clone https://github.com/rbenv/ruby-build.git "$(rbenv root)"/plugins/ruby-build```
 
 ### Procedure
 
