@@ -1,3 +1,7 @@
+## Files overview
+
+- `.emacs.commits`: Emacs configuration when editing Git commits.
+
 ## Installation
 
 Last test of installation: fresh new Debian 12 system.
@@ -26,6 +30,7 @@ Last test of installation: fresh new Debian 12 system.
     $ ln -s -T .dotfiles/.pryrc .pryrc
     $ ln -s -T .dotfiles/.rdebugrc .rdebugrc
     $ ln -s -T .dotfiles/.rspec .rspec
+    $ ln -s -T .dotfiles/.emacs.commits .emacs.commits
     $ cd .config/autostart
     $ ln -s -T ~/.dotfiles/.config/autostart/autocutsel.desktop autocutsel.desktop
     ```
