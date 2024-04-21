@@ -8,5 +8,8 @@
 [branch "stable"]
 	mergeoptions = --no-ff
 
+[branch "preproduction"]
+	mergeoptions = --no-ff
+
 [branch "master"]
 	mergeoptions = --no-ff
