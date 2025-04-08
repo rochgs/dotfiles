@@ -12,7 +12,6 @@ Last test of installation: fresh new Debian 12 system.
 - ```sudo apt install autocutsel```
 - ```git clone https://github.com/rbenv/rbenv.git ~/.rbenv```
 - ```git clone https://github.com/rbenv/ruby-build.git "$(rbenv root)"/plugins/ruby-build```
-- [Install GCloud CLI] at `/opt/google-cloud-sdk`.
 
 ### Procedure
 
