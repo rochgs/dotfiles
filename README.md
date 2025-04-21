@@ -8,6 +8,8 @@ Last test of installation: fresh new Debian 12 system.
 
 ### Prerequisites
 
+This configuration was designed for and tested under bash and GNOME.
+
 - ```sudo apt-get install bash-completion```
 - ```sudo apt install autocutsel```
 - ```git clone https://github.com/rbenv/rbenv.git ~/.rbenv```
@@ -31,6 +33,10 @@ Last test of installation: fresh new Debian 12 system.
     $ ln -s -T .dotfiles/.rdebugrc .rdebugrc
     $ ln -s -T .dotfiles/.rspec .rspec
     $ ln -s -T .dotfiles/.emacs.commits .emacs.commits
+    ```
+3. To synchronizes all clipboards present in an X Session, update paths in `.config/autostart/autocutsel.desktop`, then:
+    
+    ```
     $ cd .config/autostart
     $ ln -s -T ~/.dotfiles/.config/autostart/autocutsel.desktop autocutsel.desktop
     ```

@@ -5,8 +5,8 @@ Name=Autocutsel
 GenericName=Clipboard Synchronization
 Comment=Synchronizes all clipboards present in an X Session
 
-TryExec=/home/roch/.dotfiles/scripts/autocutsel.sh
-Exec=/home/roch/.dotfiles/scripts/autocutsel.sh
+TryExec=/home/rochgs/.dotfiles/scripts/autocutsel.sh
+Exec=/home/rochgs/.dotfiles/scripts/autocutsel.sh
 Type=Application
 Terminal=false
 NoDisplay=true
