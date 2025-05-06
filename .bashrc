@@ -74,5 +74,9 @@ if [ "$PS1" ] ; then
 
     # Alias for GNU Time:
     alias gnu-time='/usr/bin/time -v'
+
+    # For better completions in Emacs shells
+    export HISTCONTROL=ignoreboth
+    bind 'set enable-bracketed-paste off'
 fi
 
