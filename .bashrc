@@ -1,4 +1,4 @@
-# ~/.bashrc: executed by bash(1) for non-login shells.
+# ~/.bashrc: executed by bash(1) for non-login shells#.
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
 
@@ -70,9 +70,13 @@ if [ "$PS1" ] ; then
     fi
 
     # Se establece GNU/Emacs como editor por defecto:
-    export EDITOR="emacs -nw -q"
+    export EDITOR="emacsclient"
 
     # Alias for GNU Time:
     alias gnu-time='/usr/bin/time -v'
+
+    # For better completions in Emacs shells
+    export HISTCONTROL=ignoreboth
+    bind 'set enable-bracketed-paste off'
 fi
 
