@@ -3,7 +3,7 @@
 	email = rodrigo.garcia.suarez@gmail.com
 
 [core]
-    editor = emacs -nw --no-init-file --no-site-file --load ~/.emacs.commits
+    editor = emacsclient
 
 [branch "stable"]
 	mergeoptions = --no-ff
