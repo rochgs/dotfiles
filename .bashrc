@@ -78,5 +78,8 @@ if [ "$PS1" ] ; then
     # For better completions in Emacs shells
     export HISTCONTROL=ignoreboth
     bind 'set enable-bracketed-paste off'
+
+    # kubectl autocompletion
+    source <(kubectl completion bash)
 fi
 
